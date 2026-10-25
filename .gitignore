@@ -14,6 +14,6 @@ ENV/
 # Jupyter
 .ipynb_checkpoints/
 
-# Operating System
-.DS_Store
-Thumbs.db
+# Presentations & Scripts
+*.pptx
+create_presentation.py
