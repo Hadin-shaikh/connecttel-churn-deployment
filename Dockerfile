@@ -6,5 +6,7 @@ COPY ./model ./model
 COPY ./app ./app
 COPY .streamlit .streamlit
 COPY frontend.py .
-EXPOSE 8000
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+COPY run.sh .
+RUN chmod +x run.sh
+EXPOSE 10000
+CMD ["bash", "run.sh"]
